@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Srivardhan</title>
+  <link rel="icon" href="logo.jpeg" />
+  <!-- Google Fonts for elegant typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="profile_styles.css" />
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <div class="slide">
+    <nav aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section with Dynamic Typing -->
+    <!-- Hero Section with Integrated Social Links Only -->
+    <section class="hero slide0">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>NUTENKI SRIVARDHAN</h1>
+          <div>
+            <h2>
+              I'm <span id="typed-name"></span>
+            </h2>
+          </div>
+          <!-- Contact Overlay: Contains Only Social Links -->
+          <div class="contact-overlay">
+            <ul class="social-links">
+              <li>
+                <a href="https://www.linkedin.com/in/srivardhan-nutenki-207b55249" target="_blank" rel="noopener">
+                  <img src="https://openvisualfx.com/wp-content/uploads/2019/10/linkedin-icon-logo-png-transparent.png" alt="LinkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:srivardhannani8919@gmail.com" target="_blank" rel="noopener">
+                  <img src="https://static.vecteezy.com/system/resources/previews/021/514/701/non_2x/google-gmail-logo-symbol-design-illustration-with-black-background-free-vector.jpg" alt="Gmail" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/srivardhan8919" target="_blank" rel="noopener">
+                  <img src="https://previews.123rf.com/images/vasiffeyzullazadeh/vasiffeyzullazadeh1904/vasiffeyzullazadeh190400376/122453489-github-logo-vector-icon.jpg" alt="GitHub" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="character-container">
+          <img src="image.png" alt="Animated Character" class="character" />
+          <div class="character-eyes">
+            <div class="eye left-eye"></div>
+            <div class="eye right-eye"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="slide1">
+      <div class="container">
+        <h2>ABOUT ME</h2>
+        <div class="profile">
+          <figure>
+            <img src="profile_image.jpg" alt="Srivardhan Profile Image" />
+          </figure>
+          <div class="profile-text">
+            <p>
+              I am <strong>Srivardhan</strong>, a passionate computer science student specializing CSE (AI & ML) at
+              Vaagdevi College of Engineering. I have expertise in developing advanced projects like image recognition
+              systems using CNN models, alongside proficiency in Python, AWS (EC2), and web development.
+            </p>
+            <p>
+              <a href="https://drive.google.com/file/d/1SLm7gvRCRDycIJtBA8V01ofsmoSLP8Dz/view?usp=drive_link"
+                target="_blank" rel="noopener" class="discover-more">
+                Discover More
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="slide2">
+      <div class="container">
+        <h2>MY SKILLS</h2>
+        <div class="skills-logos">
+          <div class="skill-logo" data-skill="python">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+          </div>
+          <div class="skill-logo" data-skill="c">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C">
+          </div>
+          <div class="skill-logo" data-skill="cpp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+          </div>
+          <div class="skill-logo" data-skill="mysql">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL">
+          </div>
+          <div class="skill-logo" data-skill="mongodb">
+            <img src="https://images.velog.io/images/unchapterd/post/1a470b81-b5de-40e3-b98b-9d6830df6eb9/dg.jpg" alt="MongoDB">
+          </div>
+          <div class="skill-logo" data-skill="html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+          </div>
+          <div class="skill-logo" data-skill="css">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+          </div>
+          <div class="skill-logo" data-skill="javascript">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript">
+          </div>
+          <div class="skill-logo" data-skill="flask">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmD38KsMgEwahtWc_Nfs5ZVktP9dBc36MUZA&s" alt="Flask">
+          </div>
+          <div class="skill-logo" data-skill="aiml">
+            <img src="https://t4.ftcdn.net/jpg/06/28/55/91/360_F_628559175_FIOKZ44SpYEcr9OaPYKAO4ArFL0r6sQA.jpg" alt="AI & ML">
+          </div>
+          <div class="skill-logo" data-skill="aws">
+            <img src="https://www.telestream.net/aws/images/aws.png" alt="AWS">
+          </div>
+        </div>    
+        <div class="skill-details">
+          <h3 id="skill-name">Hover over a skill to see details</h3>
+          <p id="skill-days"></p>
+          <p id="skill-projects"></p>
+          <p id="skill-description"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="slide3">
+      <div class="container">
+        <h2>PROJECTS</h2>
+        <div class="slider-container">
+          <button class="slider-arrow left">&#10094;</button>
+          <div class="projects-grid">
+            <article class="project">
+              <figure>
+                <img src="image recognition.png" alt="Image recognition using CNN" />
+              </figure>
+              <div class="project-info">
+                <h3>Image Recognition using CNN</h3>
+                <p>
+                  A deep learning-based project that employs Convolutional Neural Networks (CNN) to classify and
+                  recognize images, enhancing the accuracy of image recognition systems.
+                </p>
+                <button onclick="window.open('https://github.com/srivardhan8919/ImageRecognition-CNN-CIFAR10-Gradio')">
+                  Visit GitHub
+                </button>
+              </div>
+            </article>
+            <article class="project">
+              <figure>
+                <img src="image recognition using inception and xception.png"
+                  alt="Image recognition using InceptionV3 &amp; Xception" />
+              </figure>
+              <div class="project-info">
+                <h3>Image Recognition using InceptionV3 &amp; Xception</h3>
+                <p>
+                  This project leverages pre-trained models InceptionV3 and Xception to achieve superior accuracy and
+                  efficiency in classifying complex images.
+                </p>
+                <button
+                  onclick="window.open('https://github.com/srivardhan8919/image-recognition-inception-xception-gradio')">
+                  Visit GitHub
+                </button>
+                <button onclick="window.open('https://drive.google.com/file/d/1LlqG2aSbyLx91wgHeBrs0q8t_wOK20dd/view?usp=drive_link')">
+                  Demo
+                </button>
+              </div>
+            </article>
+            <article class="project">
+              <figure>
+                <img src="nlp-chatbot.png" alt="NLP Chatbot" />
+              </figure>
+              <div class="project-info">
+                <h3>NLP-based Chatbot for College Information Retrieval</h3>
+                <p>
+                  An AI-powered chatbot designed to answer college-related queries using Natural Language Processing
+                  (NLP) techniques for accurate resource retrieval.
+                </p>
+                <button
+                  onclick="window.open('https://github.com/srivardhan8919/NLP_chatbot')">
+                  Visit GitHub
+                </button>
+                <button
+                  onclick="window.open('https://nlp-chat-bot.onrender.com/')">
+                  Live
+                </button>
+              </div>
+            </article>
+            <article class="project">
+              <figure>
+                <img src="ai-powered-expenses-tracker.png" alt="AI-Powered Expense Tracker" />
+              </figure>
+              <div class="project-info">
+                <h3>AI-Powered Expense Tracker</h3>
+                <p>
+                  This innovative tracker automates expense categorization and provides actionable financial insights
+                  using machine learning, complete with a Gradio interface for data visualization.
+                </p>
+                <button onclick="window.open('https://github.com/srivardhan8919/AI-Powered-Expense-Tracker-Gradio')">
+                  Visit GitHub
+                </button>
+                <button onclick="window.open('https://drive.google.com/file/d/1wLuIhpjtxIXFWeSlT-Dg843oISP8jzVx/view?usp=drive_link')">
+                  Demo
+                </button>
+              </div>
+            </article>
+          </div>
+          <button class="slider-arrow right">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="slide4">
+      <div class="container">
+        <h2>CONTACT</h2>
+        <div class="contact-content">
+          <div class="feedback-form">
+            <h3>I'd Love to Hear from You!</h3>
+            <form id="feedbackForm">
+              <label for="name" class="visually-hidden">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+              <label for="email" class="visually-hidden">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+              <label for="message" class="visually-hidden">Your Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Send Feedback</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Go to Top Button -->
+    <button id="goToTopBtn" class="go-to-top-btn" aria-label="Go to top" onclick="scrollToTop()">↑</button>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 by Srivardhan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
