@@ -73,10 +73,16 @@ body {
 
 .nav-list li a:hover {
   color: #ffffff;
-  /* Pinkish glow effect */
   text-shadow: 0 0 5px rgba(255, 105, 180, 0.8);
   transition: all 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 1rem;
+  }
+}
+
 
 /* ------------------ HERO SECTION ------------------ */
 .hero {
@@ -465,6 +471,12 @@ a.discover-more:hover {
   filter: blur(20px);
   z-index: -1;
   opacity: 0.3;
+}
+
+@media (max-width: 768px){
+  .skill-details{
+    max-width: 100%;
+  }
 }
 
 /* Typing Animation */
