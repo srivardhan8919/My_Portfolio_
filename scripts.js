@@ -1,23 +1,46 @@
-// Function to scroll to the specific section
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-}
 
-// Function to scroll back to the top
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// ===== Custom Animated Cursor =====
+document.addEventListener('DOMContentLoaded', () => {
+  // Only enable custom cursor on desktop
+  if (window.innerWidth > 900) {
+    const cursor = document.querySelector('.cursor');
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+    const speed = 0.22; // Lower is slower
 
-// Show the "Go to Top" button when the user scrolls down
-window.onscroll = function () {
-  const goToTopBtn = document.getElementById("goToTopBtn");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    goToTopBtn.style.display = "block";
-  } else {
-    goToTopBtn.style.display = "none";
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * speed;
+      cursorY += (mouseY - cursorY) * speed;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursor.style.opacity = 1;
+    });
+
+    document.addEventListener('mousedown', () => {
+      cursor.classList.add('cursor-click');
+    });
+    document.addEventListener('mouseup', () => {
+      cursor.classList.remove('cursor-click');
+    });
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = 0;
+    });
+    document.addEventListener('mouseenter', () => {
+      cursor.style.opacity = 1;
+    });
+
+    animateCursor();
   }
-};
+});
+
+// ...existing code...
 
 emailjs.init("hodX2j1r5XyUT4iZ9");
 
@@ -225,41 +248,6 @@ const skillDetails = {
       "I have utilized MongoDB in various full-stack projects, gaining hands-on experience in handling flexible, scalable data storage. This experience has enhanced my ability to manage dynamic datasets efficiently.",
     projects: []
   },
-  html: {
-    name: "HTML5",
-    description:
-      "I have extensively used HTML5 in the frontend development of my projects, crafting responsive and accessible web pages. My practical experience includes designing intuitive interfaces that enhance the overall user experience.",
-    projects: [
-      "Personal Portfolio Website – Developed a responsive portfolio showcasing my skills and projects.",
-      "NLP-Powered College Chatbot – Designed an intuitive frontend for chatbot interaction."
-    ]
-  },
-  css: {
-    name: "CSS3",
-    description:
-      "My proficiency in CSS3 has been integral to creating visually appealing and interactive web designs. I have applied advanced styling and animation techniques—skills I refined through both college coursework and hands-on projects.",
-    projects: [
-      "Personal Portfolio Website – Implemented modern UI/UX design techniques.",
-      "NLP-Powered College Chatbot – Styled the chatbot interface for an engaging user experience."
-    ]
-  },
-  javascript: {
-    name: "JavaScript",
-    description:
-      "I have developed interactive and dynamic web applications using JavaScript. Through various projects, I’ve enhanced user engagement by building rich, responsive interfaces that improve the overall functionality of web pages.",
-    projects: [
-      "Personal Portfolio Website – Enhanced interactivity using JavaScript animations and event-driven programming.",
-      "NLP-Powered College Chatbot – Integrated JavaScript for dynamic chatbot responses."
-    ]
-  },
-  flask: {
-    name: "Flask",
-    description:
-      "I have built scalable web applications with Flask, seamlessly integrating APIs. This practical experience has strengthened my backend development skills and streamlined project deployment.",
-    projects: [
-      "NLP-Powered College Chatbot – Developed Flask-based backend for chatbot communication."
-    ]
-  },
   aiml: {
     name: "AI & ML",
     description:
@@ -277,6 +265,17 @@ const skillDetails = {
       "I have deployed cloud-based solutions using AWS, ensuring scalability and security for various projects. This experience has enabled me to manage and optimize cloud infrastructures effectively, supporting robust application development.",
     projects: [
       "NLP-Powered College Chatbot – Deployed on AWS EC2 for scalable hosting."
+    ]
+  }
+  ,
+  git: {
+    name: "Git (Version Control)",
+    description:
+      "I use Git for version control to efficiently manage code changes, collaborate with teams, and maintain project history. My experience includes branching, merging, and resolving conflicts in both solo and group projects.",
+    projects: [
+      "Portfolio Website – Managed all code changes and feature additions using Git.",
+      "AI-Powered Expense Tracker – Collaborated with team members using Git for version control.",
+      "NLP-Powered College Chatbot – Utilized Git for source management and deployment workflows."
     ]
   }
 };
